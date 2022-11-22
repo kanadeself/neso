@@ -78,6 +78,14 @@ const context = {
         {
             name: "Ruby",
             color: "#ee6da6"
+        },
+        {
+            name: "Sarah",
+            color: "#adc7ec"
+        },
+        {
+            name: "Leah",
+            color: "#dde6ed"
         }
     ],
     niji: [
@@ -128,6 +136,10 @@ const context = {
         {
             name: "Lanzhu",
             color: "#efc3c0"
+        },
+        {
+            name: "Yuu",
+            color: "#1d1d1d"
         }
     ],
     liella: [

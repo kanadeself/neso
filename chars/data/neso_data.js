@@ -5086,7 +5086,125 @@ const context = {
             exclusive: "No",
             img: "tera.jpg"
         }
-    ]
+    ],
+    leah: [
+        {
+            name: "Self Control",
+            year: "2018",
+            msize: "JNN",
+            size: "30cm",
+            exclusive: "No",
+            img: "selfcontrol.jpg"
+        },
+        {
+            name: "Dazzling White Town",
+            year: "2020",
+            msize: "JNN",
+            size: "30cm",
+            exclusive: "No",
+            img: "dazz.jpg"
+        },
+        {
+            name: "Waitress",
+            year: "2020",
+            msize: "MJNN",
+            size: "40cm",
+            exclusive: "No",
+            img: "waitress.jpg"
+        },
+        {
+            name: "Uniform",
+            year: "2018",
+            msize: "MJNN",
+            size: "40cm",
+            exclusive: "No",
+            img: "umjnn.jpg"
+        },
+        {
+            name: "Believe Again",
+            year: "2019",
+            msize: "LL",
+            size: "50cm",
+            exclusive: "No",
+            img: "believe.jpg"
+        }
+    ],
+    sarah: [
+        {
+            name: "Self Control",
+            year: "2018",
+            msize: "JNN",
+            size: "30cm",
+            exclusive: "No",
+            img: "selfcontrol.jpg"
+        },
+        {
+            name: "Dazzling White Town",
+            year: "2020",
+            msize: "JNN",
+            size: "30cm",
+            exclusive: "No",
+            img: "dazz.jpg"
+        },
+        {
+            name: "Waitress",
+            year: "2020",
+            msize: "MJNN",
+            size: "40cm",
+            exclusive: "No",
+            img: "waitress.jpg"
+        },
+        {
+            name: "Uniform",
+            year: "2018",
+            msize: "MJNN",
+            size: "40cm",
+            exclusive: "No",
+            img: "umjnn.jpg"
+        },
+        {
+            name: "Believe Again",
+            year: "2019",
+            msize: "LL",
+            size: "50cm",
+            exclusive: "No",
+            img: "believe.jpg"
+        }
+    ],
+    yuu: [
+        {
+            name: "Winter Uniform",
+            year: "2022",
+            msize: "KCM",
+            size: "12cm",
+            exclusive: "No",
+            img: "wkcm.jpg"
+        },
+        {
+            name: "Winter Practice",
+            year: "2022",
+            msize: "NNN",
+            size: "16cm",
+            exclusive: "No",
+            img: "wpnnn.jpg"
+        },
+        {
+            name: "Summer Uniform",
+            year: "2022",
+            msize: "MJNN",
+            size: "40cm",
+            exclusive: "No",
+            img: "smjnn.jpg"
+        },
+        {
+            name: "Winter Uniform",
+            year: "2022",
+            msize: "TJNN",
+            size: "1m",
+            exclusive: "No",
+            img: "tera.jpg"
+        }
+    ],
 };
 const html = template(context);
 const destination = document.querySelector(".neso");
