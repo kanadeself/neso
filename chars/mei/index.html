@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mei - NesoDB</title>
+        <meta name="theme-color" content="#ff3535">
+        <meta property="og:title" content="Mei - NesoDB" />
+        <meta property="og:description" content="Mei Yoneme - All nesoberi outfits" />
+        <meta property="og:image" content="https://nesodb.me/chars/img/mei/big.png" />
+        <link rel="stylesheet" href="../stylesdb.css">
+        <link rel="icon" type="image/png" href="../img/mei/big.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Readex+Pro&display=swap" rel="stylesheet">
+    </head>
+<body style="background:#231145;color:white;font-family:'Nunito', sans-serif;">
+    <div class="header" style="flex-basis:100%; text-align: center;">
+        <div class="headertext">
+            <h1>Mei Yoneme</h1>
+            <img class="icon" src="../img/mei/icon.png">
+        </div>
+        <div class="boton" style="padding-bottom:5%;"><a href="../" class="butt"><p class="t1">Back to characters</p></a></div>
+    </div>
+    <div id="myBtnContainer" style="display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:8px;flex-basis:100%;">
+        <button class="btn active" onclick="filterSelection('all')">Show all</button>
+        <button class="btn" onclick="filterSelection('NNN')">NNN</button>
+        <button class="btn" onclick="filterSelection('JNN')">JNN/MJNN</button>
+    </div>
+    <div class="neso"></div>
+    <script id="list" type="text/x-handlebars-template">
+    {{#each mei}}
+    <div class="itemcontainer filterDiv {{msize}}">
+        <div class="rectangle">
+            <div class="toph">
+                <p class="bhtext" style="text-align: center;font-size:25px;">{{msize}}</p>
+            </div>
+            <div class="image">
+                <img src="../img/mei/{{img}}">
+            </div>
+            <div class="bottom">
+                <div class="bottomheader">
+                    <p class="bhtext">{{name}}</p>
+                </div>
+                <div class="bottominfo">
+                    <p>
+                        <span style="font-weight: bold;">Release Year:</span>
+                        <span>{{year}}</span>
+                    </p>
+                    <p>
+                        <span style="font-weight: bold;">Actual Size:</span>
+                        <span>{{size}}</span>
+                    </p>
+                    <p>
+                        <span style="font-weight: bold;">Exclusive to member?:</span>
+                        <span>{{exclusive}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>   
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="../data/neso_data.js"></script>
+<script src="../filter.js"></script>
+</body>
+</html> 
