@@ -1,7 +1,10 @@
 filterSelection("all")
 
 function filterSelection(c) {
-    console.log('filtering:', c)
+    
+    if (document.getElementsByClassName('active')[0]) document.getElementsByClassName('active')[0].className = "btn";
+    if (document.getElementById(c + "-button")) document.getElementById(c + "-button").className = "btn active";
+
     var x, i;
     x = document.getElementsByClassName("filterDiv");
     if (c == "all") c = "";
@@ -10,9 +13,6 @@ function filterSelection(c) {
         w3RemoveClass(x[i], "show");
         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
     }
-
-    if (document.getElementsByClassName('active')[0]) document.getElementsByClassName('active')[0].className = "btn";
-    if (document.getElementById(c + "-button")) document.getElementById(c + "-button").className = "btn active";
 }
 
 // Show filtered elements
