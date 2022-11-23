@@ -24,9 +24,6 @@
 <body style="background:#231145;color:white;font-family:'Nunito', sans-serif;">
 
     <div id="root"></div>
-
-    <div id="myBtnContainer"></div>
-    
     <script type="text/babel">
         const queryParams = new URLSearchParams(window.location.search);
         const char = queryParams.get('char');
@@ -56,10 +53,11 @@
                     const MButtons = () => {
                         return(
                             <>
-                                <button className="btn active" onClick={handleClick}>Show all</button>
+                            
+                                <button className="btn active" onClick={(e) => filterSelection('all')}>Show all</button>
 
                                 {msizes && msizes.map((msize) => {
-                                    return <button className="btn" onClick={handleClick}>{msize}</button>
+                                    return <button className="btn" onClick={(e) => filterSelection(msize)}>{msize}</button>
                                 })}
                             </>
                         )
