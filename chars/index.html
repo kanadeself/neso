@@ -28,12 +28,16 @@
         const queryParams = new URLSearchParams(window.location.search);
         const char = queryParams.get('char');
 
-        if(!char)
-        {
-            fetchData('./data/chardata.json', (data) => {
-                RenderCharList(data);
-            })
-        }
+        fetchData('data/characters.json', (characters) => {
+            if(!characters.characters.includes(char)){
+                fetchData('./data/chardata.json', (data) => {
+                    RenderCharList(data);
+                })
+            } else{
+                
+            }
+        })
+
     </script>
 
 <p>By <a href="https://twitter.com/frostyharu" target="_blank" style="color:#fee202;text-decoration:underline;">Haru</a>. This page is <a href="https://github.com/cloudyharu/neso" target="_blank" style="color:#fee202;text-decoration:underline;">open source!</a></p>

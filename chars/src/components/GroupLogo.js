@@ -1,4 +1,3 @@
-
 function GroupLogo(name){
     return (
         <div className="logos">

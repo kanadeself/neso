@@ -1,6 +1,4 @@
 function RenderCharList(data){
-    console.log(data)
-
     const CharList = () => {
         return (
             <div className="character">
