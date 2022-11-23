@@ -23,7 +23,9 @@
 </head>
 <body style="background:#231145;color:white;font-family:'Nunito', sans-serif;">
 
+    <div id="myBtnContainer"></div>
     <div id="root"></div>
+
     <script type="text/babel">
         const queryParams = new URLSearchParams(window.location.search);
         const char = queryParams.get('char');
@@ -42,6 +44,7 @@
                     let msizes = [];
 
                     nesos.forEach((neso) => {
+                        if(!neso.msize) return;
                         if(!msizes.includes(neso.msize))
                             msizes.push(neso.msize)
                     })
@@ -53,7 +56,6 @@
                     const MButtons = () => {
                         return(
                             <>
-                            
                                 <button className="btn active" onClick={(e) => filterSelection('all')}>Show all</button>
 
                                 {msizes && msizes.map((msize) => {
@@ -68,6 +70,7 @@
                             <div>
                                 <div className="neso">
                                     {nesos && nesos.map((neso) => {
+                                        if(!neso.msize) return;
                                         return(           
                                         <div className={"itemcontainer filterDiv show " + neso.msize}>
                                             <div className="rectangle">

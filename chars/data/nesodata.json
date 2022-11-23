@@ -1,5 +1,8 @@
 {
     "yoshiko": [
+        
+        "Yoshiko Tsushima",
+
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -266,6 +269,7 @@
         }
     ],
     "hanamaru": [
+        "Hanamaru Kunikida",
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -548,6 +552,7 @@
         }
     ],
     "riko": [
+        "Riko Sakurauchi",
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -838,6 +843,7 @@
         }
     ],
     "you": [
+        "You Watanabe",
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -1136,6 +1142,7 @@
         }
     ],
     "chika": [
+        "Chika Takami",
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -1434,6 +1441,7 @@
         }
     ],
     "mari": [
+        "Mari Ohara",
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -1700,6 +1708,7 @@
         }
     ],
     "kanan": [
+        "Kanan Matsuura",
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -1966,6 +1975,7 @@
         }
     ],
     "dia": [
+        "Dia Kurosawa",
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -2232,6 +2242,7 @@
         }
     ],
     "ruby": [
+        "Ruby Kurosawa",
         {
             "name": "Uranohoshi Winter Uniform",
             "year": "2016",
@@ -2498,6 +2509,7 @@
         }
     ],
     "setsuna": [
+        "Setsuna Yuki",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -2596,6 +2608,7 @@
         }
     ],
     "shioriko": [
+        "Shioriko Mifune",
         {
             "name": "Winter Uniform",
             "year": "2022",
@@ -2662,6 +2675,7 @@
         }
     ],
     "ai": [
+        "Ai Miyashita",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -2760,6 +2774,7 @@
         }
     ],
     "rina": [
+        "Rina Tennoji",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -2858,6 +2873,7 @@
         }
     ],
     "shizuku": [
+        "Shizuku Osaka",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -2956,6 +2972,7 @@
         }
     ],
     "mia": [
+        "Mia Taylor",
         {
             "name": "Winter Uniform",
             "year": "2022",
@@ -3006,6 +3023,7 @@
         }
     ],
     "kanata": [
+        "Kanata Konoe",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -3104,6 +3122,7 @@
         }
     ],
     "lanzhu": [
+        "Lanzhu Zhong",
         {
             "name": "Winter Uniform",
             "year": "2022",
@@ -3154,6 +3173,7 @@
         }
     ],
     "kasumi": [
+        "Kasumi Nakasu",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -3252,6 +3272,7 @@
         }
     ],    
     "ayumu": [
+        "Ayumu Uehara",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -3350,6 +3371,7 @@
         }
     ],
     "karin": [
+        "Karin Asaka",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -3448,6 +3470,7 @@
         }
     ],
     "emma": [
+        "Emma Verde",
         {
             "name": "Summer Uniform",
             "year": "2022",
@@ -3546,6 +3569,7 @@
         }
     ],
     "kanon": [
+        "Kanon Shibuya",
         {
             "name": "Starlight Prologue",
             "year": "2022",
@@ -3604,6 +3628,7 @@
         }
     ],
     "keke": [
+        "Keke Tang",
         {
             "name": "Starlight Prologue",
             "year": "2022",
@@ -3662,6 +3687,7 @@
         }
     ],
     "sumire": [
+        "Sumire Heanna",
         {
             "name": "Starlight Prologue",
             "year": "2022",
@@ -3720,6 +3746,7 @@
         }
     ],
     "chisato": [
+        "Chisato Arashi",
         {
             "name": "Starlight Prologue",
             "year": "2022",
@@ -3778,6 +3805,7 @@
         }
     ],
     "ren": [
+        "Ren Hazuki",
         {
             "name": "Starlight Prologue",
             "year": "2022",
@@ -3836,6 +3864,7 @@
         }
     ],
     "kinako": [
+        "Kinako Sakurakoji",
         {
             "name": "School Uniform (2022 ver.)",
             "year": "2022",
@@ -3862,6 +3891,7 @@
         }
     ],
     "mei": [
+        "Mei Yoneme",
         {
             "name": "School Uniform (2022 ver.)",
             "year": "2022",
@@ -3888,6 +3918,7 @@
         }
     ],
     "shiki": [
+        "Shiki Wakana",
         {
             "name": "School Uniform (2022 ver.)",
             "year": "2022",
@@ -3914,6 +3945,7 @@
         }
     ],
     "natsumi": [
+        "Natsumi Onitsuka",
         {
             "name": "School Uniform (2022 ver.)",
             "year": "2022",
@@ -3940,6 +3972,7 @@
         }
     ],
     "honoka": [
+        "Honoka Kousaka",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -4086,6 +4119,7 @@
         }
     ],
     "umi": [
+        "Umi Sonoda",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -4216,6 +4250,7 @@
         }
     ],
     "rin": [
+        "Rin Hoshizora",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -4354,6 +4389,7 @@
         }
     ],
     "kotori": [
+        "Kotori Minami",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -4476,6 +4512,7 @@
         }
     ],
     "maki": [
+        "Maki Nishikino",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -4598,6 +4635,7 @@
         }
     ],
     "eli": [
+        "Eli Ayase",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -4720,6 +4758,7 @@
         }
     ],
     "nozomi": [
+        "Nozomi Tojo",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -4842,6 +4881,7 @@
         }
     ],
     "hanayo": [
+        "Hanayo Koizumi",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -4964,6 +5004,7 @@
         }
     ],
     "nico": [
+        "Nico Yazawa",
         {
             "name": "Otonokizaka Winter Uniform",
             "year": "2015",
@@ -5086,6 +5127,7 @@
         }
     ],
     "leah": [
+        "Leah Kazuno",
         {
             "name": "Self Control",
             "year": "2018",
@@ -5128,6 +5170,7 @@
         }
     ],
     "sarah": [
+        "Sarah Kazuno",
         {
             "name": "Self Control",
             "year": "2018",
@@ -5170,6 +5213,7 @@
         }
     ],
     "yuu": [
+        "Yuu Takasaki",
         {
             "name": "Winter Uniform",
             "year": "2022",
