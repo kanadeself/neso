@@ -1,0 +1,178 @@
+{
+    "us": [
+       {
+           "name": "Honoka",
+           "color": "#f39801"
+       },
+       {
+           "name": "Eli",
+           "color": "#1eb8ec"
+       },
+       {
+           "name": "Kotori",
+           "color": "#abadac"
+       },
+       {
+           "name": "Umi",
+           "color": "#2c72b7"
+       },
+       {
+           "name": "Rin",
+           "color": "#fef102"
+       },
+       {
+           "name": "Maki",
+           "color": "#e93421"
+       },
+       {
+           "name": "Nozomi",
+           "color": "#925da3"
+       },
+       {
+           "name": "Hanayo",
+           "color": "#23ac3a"
+       },
+       {
+           "name": "Nico",
+           "color": "#ec6f9b"
+       }
+   ],
+   "aqours": [
+       {
+           "name": "Chika",
+           "color": "#f28100"
+       },
+       {
+           "name": "Riko",
+           "color": "#f39c95"
+       },
+       {
+           "name": "Kanan",
+           "color": "#63c0ad"
+       },
+       {
+           "name": "Dia",
+           "color": "#e70014"
+       },
+       {
+           "name": "You",
+           "color": "#67aadf"
+       },
+       {
+           "name": "Yoshiko",
+           "color": "#9f9f9f"
+       },
+       {
+           "name": "Hanamaru",
+           "color": "#fee202"
+       },
+       {
+           "name": "Mari",
+           "color": "#6458a4"
+       },
+       {
+           "name": "Ruby",
+           "color": "#ee6da6"
+       },
+       {
+           "name": "Sarah",
+           "color": "#adc7ec"
+       },
+       {
+           "name": "Leah",
+           "color": "#dde6ed"
+       }
+   ],
+   "niji": [
+       {
+           "name": "Ayumu",
+           "color": "#f0939e"
+       },
+       {
+           "name": "Kasumi",
+           "color": "#f7f064"
+       },
+       {
+           "name": "Shizuku",
+           "color": "#81c6ef"
+       },
+       {
+           "name": "Karin",
+           "color": "#034099"
+       },
+       {
+           "name": "Ai",
+           "color": "#eb6001"
+       },
+       {
+           "name": "Kanata",
+           "color": "#ba8ec1"
+       },
+       {
+           "name": "Setsuna",
+           "color": "#da363f"
+       },
+       {
+           "name": "Emma",
+           "color": "#6cbd61"
+       },
+       {
+           "name": "Rina",
+           "color": "#a8aaa9"
+       },
+       {
+           "name": "Shioriko",
+           "color": "#2c9e7e"
+       },        
+       {
+           "name": "Mia",
+           "color": "#aaa798"
+       },        
+       {
+           "name": "Lanzhu",
+           "color": "#efc3c0"
+       },
+       {
+           "name": "Yuu",
+           "color": "#1d1d1d"
+       }
+   ],
+   "liella": [
+       {
+           "name": "Kanon",
+           "color": "#ff7f27"
+       },
+       {
+           "name": "Keke",
+           "color": "#a0fff9"
+       },
+       {
+           "name": "Chisato",
+           "color": "#ff6e90"
+       },
+       {
+           "name": "Sumire",
+           "color": "#74f466"
+       },
+       {
+           "name": "Ren",
+           "color": "#0000a0"
+       },
+       {
+           "name": "Kinako",
+           "color": "#fff442"
+       },
+       {
+           "name": "Mei",
+           "color": "#ff3535"
+       },
+       {
+           "name": "Shiki",
+           "color": "#b2ffdd"
+       },
+       {
+           "name": "Natsumi",
+           "color": "#ff51c4"
+       }
+   ]
+}

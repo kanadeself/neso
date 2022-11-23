@@ -32,7 +32,7 @@
     <div class="neso"></div>
     <script id="list" type="text/x-handlebars-template">
     {{#each karin}}
-    <div class="itemcontainer filterDiv {{msize}}">
+    <div class="itemcontainer filterDiv show {{msize}}">
         <div class="rectangle">
             <div class="toph">
                 <p class="bhtext" style="text-align: center;font-size:25px;">{{msize}}</p>
@@ -64,7 +64,7 @@
     {{/each}}
 </script>   
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-<script src="../data/neso_data.js"></script>
+<script type="module" src="../data/neso_data.js"></script>
 <script src="../filter.js"></script>
 </body>
 </html> 
