@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,116 +19,28 @@
     <script type="text/babel" src="./src/components/CharImage.js"></script>
     <script type="text/babel" src="./src/components/GroupLogo.js"></script>
     <script type="text/babel" src="./src/components/GenerateCharList.js"></script>
+    <script type="text/babel" src="./src/components/Neso.js"></script>
+    <script type="text/babel" src="./src/components/NesoContainer.js"></script>
+    <script type="text/babel" src="./src/components/NameHeader.js"></script>
     <script type="text/babel" src="./src/Utils/FetchData.js"></script>
-    <script src="./filter.js"></script>
+    <script src="./src/Utils/filter.js"></script>
+    <script type="text/babel" src="./src/components/MButtons.js"></script>
 </head>
+
 <body style="background:#231145;color:white;font-family:'Nunito', sans-serif;">
 
     <div id="header"></div>
     <div id="myBtnContainer" class="buttons"></div>
     <div id="root"></div>
 
-    <script type="text/babel">
-        const queryParams = new URLSearchParams(window.location.search);
-        const char = queryParams.get('char');
+    <script type="text/babel" src="./src/components/RenderCharPage.js"></script>
 
-        fetchData('data/characters.json', (characters) => {
-            if(!characters.characters.includes(char)){
-                fetchData('./data/chardata.json', (data) => {
-                    RenderCharList(data);
-                })
-            } else{
-                fetchData('data/nesodata.json', (nesoData) => {
-                    
-                    const nesos = nesoData[char]
-                    console.log(nesos)
-                    
-                    let msizes = [];
-
-                    nesos.forEach((neso) => {
-                        if(!neso.msize) return;
-                        if(!msizes.includes(neso.msize))
-                            msizes.push(neso.msize)
-                    })
-
-                    const Nameheader = () => {
-                        return(
-                            <div class="header">
-                                <div class="headertext">
-                                    <h1>{nesoData[char][0]}</h1>
-                                    <img class="icon" src={`img/${char}/icon.png`} />
-                                </div>
-                                <div class="boton"><a href="https://nesodb.me/chars/    " class="butt"><p class="t1">Back to characters</p></a></div>
-                            </div>
-                        )
-                    }
-                    
-                    const handleClick = (e) => {
-                        filterSelection('Petit')
-                    }
-
-                    const MButtons = () => {
-                        return(
-                            <>
-                            <button id="all-button" className="btn active" onClick={(e) => filterSelection('all')}>Show all</button>
-                                {msizes && msizes.map((msize) => {
-                                    return <button id={msize + "-button"} className="btn" onClick={(e) => filterSelection(msize)}>{msize}</button>
-                                })} 
-                            </>
-                        )
-                    }
-
-                    const Nesos = () => {
-                        return (
-                            <div>
-                                <div className="neso">
-                                    {nesos && nesos.map((neso) => {
-                                        if(!neso.msize) return;
-                                        return(           
-                                        <div className={"itemcontainer filterDiv show " + neso.msize}>
-                                            <div className="rectangle">
-                                                <div className="toph">
-                                                    <p className="bhtext" style={{textAlign: 'center', fontSize: '25px'}}>{neso.msize}</p>
-                                                </div>
-                                                <div className="image">
-                                                    <img src={`img/${char}/${neso.img}`} class="nesoimg"/>
-                                                </div>
-                                                <div className="bottom">
-                                                    <div className="bottomheader">
-                                                        <p className="bhtext">{neso.name}</p>
-                                                    </div>
-                                                    <div className="bottominfo">
-                                                        <p>
-                                                            <span style={{fontWeight: 'bold'}}>Release Year:&nbsp;</span>
-                                                            <span>{neso.year}</span>
-                                                        </p>
-                                                        <p>
-                                                            <span style={{fontWeight: 'bold'}}>Actual Size:&nbsp;</span>
-                                                            <span>{neso.size}</span>
-                                                        </p>
-                                                        <p>
-                                                            <span style={{fontWeight: 'bold'}}>Exclusive to member?:&nbsp;</span>
-                                                            <span>{neso.exclusive}</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>)
-                                    })}
-                                </div>
-                            </div>
-                         )
-                    };
-                    
-                    ReactDOM.render(<Nameheader />, document.getElementById('header'))
-                    ReactDOM.render(<MButtons />, document.getElementById('myBtnContainer'))
-                    ReactDOM.render(<Nesos />, document.getElementById('root'))
-                })
-            }
-        })
-
-    </script>
-
-<p class="footer">By&nbsp;<a href="https://twitter.com/frostyharu" target="_blank" style="color:#fee202;text-decoration:underline;">Haru</a>, with contributions from&nbsp;<a href="https://twitter.com/Dalibor_osu" target="_blank" style="color:#fee202;text-decoration:underline;">Dalibor</a>. This page is&nbsp;<a href="https://github.com/cloudyharu/neso" target="_blank" style="color:#fee202;text-decoration:underline;">open source!</a></p>
+    <p class="footer">By&nbsp;<a href="https://twitter.com/frostyharu" target="_blank"
+            style="color:#fee202;text-decoration:underline;">Haru</a>, with contributions from&nbsp;<a
+            href="https://twitter.com/Dalibor_osu" target="_blank"
+            style="color:#fee202;text-decoration:underline;">Dalibor</a>. This page is&nbsp;<a
+            href="https://github.com/cloudyharu/neso" target="_blank"
+            style="color:#fee202;text-decoration:underline;">open source!</a></p>
 </body>
+
 </html>

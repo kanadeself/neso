@@ -6,7 +6,7 @@
     .nesoimg {
         width: 20rem;
     }
-  }
+}
 
 @media screen and (min-width: 531px) {
     .rectangle {
@@ -16,44 +16,44 @@
     .nesoimg {
         width: 33rem;
     }
-  }
+}
 
 a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
 body {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-shrink:3;
+    flex-shrink: 3;
 }
 
 .logos {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
-    padding:8px;
+    padding: 8px;
 }
 
-.logos .logo-image{
+.logos .logo-image {
     width: 200px
 }
 
-.logos .logo-image.us{
+.logos .logo-image.us {
     height: 100px;
-    width:auto
+    width: auto
 }
 
 .character {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.itemcontainer { 
-    padding:8px;
+.itemcontainer {
+    padding: 8px;
 }
 
 .rectangle {
@@ -62,12 +62,12 @@ body {
 }
 
 img {
-    width:128px;
+    width: 128px;
 }
 
 .bottom {
     border-radius: 0 0 7px 7px;
-    height:200px;
+    height: 200px;
     background: #484459;
 }
 
@@ -103,7 +103,7 @@ img {
 }
 
 .neso {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -116,7 +116,7 @@ img {
 
 .icon {
     border-radius: 0;
-    width:35px;
+    width: 35px;
     height: 35px;
     padding-left: 8px;
 }
@@ -145,7 +145,7 @@ img {
 
 .btn {
     border: 4px black solid;
-    border-radius:20px;
+    border-radius: 20px;
     outline: none;
     padding: 10px 20px 10px 20px;
     margin: 1px;
@@ -154,39 +154,39 @@ img {
     cursor: pointer;
     font-family: 'Nunito', sans-serif !important;
     transition: 0.3s;
-  }
-  
-  .btn.active {
+}
+
+.btn.active {
     background-color: white;
     color: black;
-  }
+}
 
-  .line-break {
-    flex-basis:100%;
-    width:100%;
-  }
+.line-break {
+    flex-basis: 100%;
+    width: 100%;
+}
 
- .buttons {
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-    flex-basis:100%;
-  }
-
-  .footer {
-    flex-basis:100%;
-    display:flex;
+.buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-  }
+    gap: 8px;
+    flex-basis: 100%;
+}
 
-  .boton {
-    flex-basis:100%;
+.footer {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.boton {
+    flex-basis: 100%;
     padding-bottom: 8px;
-  }
+}
 
-  .header {
-    flex-basis:100%;
+.header {
+    flex-basis: 100%;
     text-align: center;
-  }
+}

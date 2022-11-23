@@ -1,8 +1,8 @@
-function RenderCharList(data){
+function RenderCharList(data) {
     const CharList = () => {
         return (
             <div className="character">
-    
+
                 {data.groups.map((group) => {
                     return (
                         <>
@@ -14,6 +14,6 @@ function RenderCharList(data){
             </div>
         )
     };
-    
+
     ReactDOM.render(<CharList />, document.getElementById('root'))
 }

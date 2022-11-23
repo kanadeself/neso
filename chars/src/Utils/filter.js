@@ -11,8 +11,8 @@ function filterSelection(c) {
         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
     }
 
-    document.getElementsByClassName('active')[0].className = "btn";
-    document.getElementById(c + "-button").className = "btn active";
+    if (document.getElementsByClassName('active')[0]) document.getElementsByClassName('active')[0].className = "btn";
+    if (document.getElementById(c + "-button")) document.getElementById(c + "-button").className = "btn active";
 }
 
 // Show filtered elements
