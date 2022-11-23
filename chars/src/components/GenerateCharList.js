@@ -17,4 +17,3 @@ function RenderCharList(data){
     
     ReactDOM.render(<CharList />, document.getElementById('root'))
 }
-

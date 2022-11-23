@@ -19,6 +19,7 @@
     <script type="text/babel" src="./src/components/GroupLogo.js"></script>
     <script type="text/babel" src="./src/components/GenerateCharList.js"></script>
     <script type="text/babel" src="./src/Utils/FetchData.js"></script>
+    <script src="./filter.js"></script>
 </head>
 <body style="background:#231145;color:white;font-family:'Nunito', sans-serif;">
 
@@ -34,7 +35,69 @@
                     RenderCharList(data);
                 })
             } else{
-                
+                fetchData('data/nesodata.json', (nesoData) => {
+                    
+                    const nesos = nesoData[char]
+                    console.log(nesos)
+                    
+                    let msizes = [];
+
+                    nesos.forEach((neso) => {
+                        if(!msizes.includes(neso.msize))
+                            msizes.push(neso.msize)
+                    })
+                    
+                    const MButtons = () => {
+                        return (
+                            <div>
+                                <div id="myBtnContainer">
+                                <button className="btn active" onClick={filterSelection('all')}>Show all</button>
+
+                                {msizes && msizes.map((msize) => {
+                                    return <button className="btn" onClick={filterSelection(msize)}>{msize}</button>
+                                })}
+                                </div>
+
+                                <div className="neso">
+                                    {nesos && nesos.map((neso) => {
+                                        return(           
+                                        <div className={"itemcontainer filterDiv show " + neso.msize}>
+                                            <div className="rectangle">
+                                                <div className="toph">
+                                                    <p className="bhtext" style={{textAlign: 'center', fontSize: '25px'}}>{neso.msize}</p>
+                                                </div>
+                                                <div className="image">
+                                                    <img src={`img/${char}/${neso.img}`}/>
+                                                </div>
+                                                <div className="bottom">
+                                                    <div className="bottomheader">
+                                                        <p className="bhtext">{neso.name}</p>
+                                                    </div>
+                                                    <div className="bottominfo">
+                                                        <p>
+                                                            <span style={{fontWeight: 'bold'}}>Release Year:</span>
+                                                            <span>{neso.year}</span>
+                                                        </p>
+                                                        <p>
+                                                            <span style={{fontWeight: 'bold'}}>Actual Size:</span>
+                                                            <span>{neso.size}</span>
+                                                        </p>
+                                                        <p>
+                                                            <span style={{fontWeight: 'bold'}}>Exclusive to member?:</span>
+                                                            <span>{neso.exclusive}</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>)
+                                    })}
+                                </div>
+                            </div>
+                         )
+                    };
+                    
+                    ReactDOM.render(<MButtons />, document.getElementById('root'))
+                })
             }
         })
 
