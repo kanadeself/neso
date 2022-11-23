@@ -25,6 +25,8 @@
 
     <div id="root"></div>
 
+    <div id="myBtnContainer"></div>
+    
     <script type="text/babel">
         const queryParams = new URLSearchParams(window.location.search);
         const char = queryParams.get('char');
@@ -47,17 +49,25 @@
                             msizes.push(neso.msize)
                     })
                     
+                    const handleClick = (e) => {
+                        filterSelection('Petit')
+                    }
+
                     const MButtons = () => {
-                        return (
-                            <div>
-                                <div id="myBtnContainer">
-                                <button className="btn active" onClick={filterSelection('all')}>Show all</button>
+                        return(
+                            <>
+                                <button className="btn active" onClick={handleClick}>Show all</button>
 
                                 {msizes && msizes.map((msize) => {
-                                    return <button className="btn" onClick={filterSelection(msize)}>{msize}</button>
+                                    return <button className="btn" onClick={handleClick}>{msize}</button>
                                 })}
-                                </div>
+                            </>
+                        )
+                    }
 
+                    const Nesos = () => {
+                        return (
+                            <div>
                                 <div className="neso">
                                     {nesos && nesos.map((neso) => {
                                         return(           
@@ -96,7 +106,8 @@
                          )
                     };
                     
-                    ReactDOM.render(<MButtons />, document.getElementById('root'))
+                    ReactDOM.render(<MButtons />, document.getElementById('myBtnContainer'))
+                    ReactDOM.render(<Nesos />, document.getElementById('root'))
                 })
             }
         })

@@ -71,3 +71,11 @@ img {
     line-height: 0;
     background-color: #413d50;
 }
+
+.filterDiv {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
