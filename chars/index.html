@@ -23,8 +23,8 @@
 </head>
 <body style="background:#231145;color:white;font-family:'Nunito', sans-serif;">
 
-    <div id="headerContainer"></div>
-    <div id="myBtnContainer"></div>
+    <div id="header"></div>
+    <div id="myBtnContainer" class="buttons"></div>
     <div id="root"></div>
 
     <script type="text/babel">
@@ -49,6 +49,18 @@
                         if(!msizes.includes(neso.msize))
                             msizes.push(neso.msize)
                     })
+
+                    const Nameheader = () => {
+                        return(
+                            <div class="header">
+                                <div class="headertext">
+                                    <h1>{nesoData[char][0]}</h1>
+                                    <img class="icon" src={`img/${char}/icon.png`} />
+                                </div>
+                                <div class="boton"><a href="https://nesodb.me/chars/    " class="butt"><p class="t1">Back to characters</p></a></div>
+                            </div>
+                        )
+                    }
                     
                     const handleClick = (e) => {
                         filterSelection('Petit')
@@ -57,11 +69,10 @@
                     const MButtons = () => {
                         return(
                             <>
-                                <button id="all-button" className="btn active" onClick={(e) => filterSelection('all')}>Show all</button>
-
+                            <button id="all-button" className="btn active" onClick={(e) => filterSelection('all')}>Show all</button>
                                 {msizes && msizes.map((msize) => {
                                     return <button id={msize + "-button"} className="btn" onClick={(e) => filterSelection(msize)}>{msize}</button>
-                                })}
+                                })} 
                             </>
                         )
                     }
@@ -79,7 +90,7 @@
                                                     <p className="bhtext" style={{textAlign: 'center', fontSize: '25px'}}>{neso.msize}</p>
                                                 </div>
                                                 <div className="image">
-                                                    <img src={`img/${char}/${neso.img}`}/>
+                                                    <img src={`img/${char}/${neso.img}`} class="nesoimg"/>
                                                 </div>
                                                 <div className="bottom">
                                                     <div className="bottomheader">
@@ -87,15 +98,15 @@
                                                     </div>
                                                     <div className="bottominfo">
                                                         <p>
-                                                            <span style={{fontWeight: 'bold'}}>Release Year:</span>
+                                                            <span style={{fontWeight: 'bold'}}>Release Year:&nbsp;</span>
                                                             <span>{neso.year}</span>
                                                         </p>
                                                         <p>
-                                                            <span style={{fontWeight: 'bold'}}>Actual Size:</span>
+                                                            <span style={{fontWeight: 'bold'}}>Actual Size:&nbsp;</span>
                                                             <span>{neso.size}</span>
                                                         </p>
                                                         <p>
-                                                            <span style={{fontWeight: 'bold'}}>Exclusive to member?:</span>
+                                                            <span style={{fontWeight: 'bold'}}>Exclusive to member?:&nbsp;</span>
                                                             <span>{neso.exclusive}</span>
                                                         </p>
                                                     </div>
@@ -108,6 +119,7 @@
                          )
                     };
                     
+                    ReactDOM.render(<Nameheader />, document.getElementById('header'))
                     ReactDOM.render(<MButtons />, document.getElementById('myBtnContainer'))
                     ReactDOM.render(<Nesos />, document.getElementById('root'))
                 })
@@ -116,6 +128,6 @@
 
     </script>
 
-<p>By <a href="https://twitter.com/frostyharu" target="_blank" style="color:#fee202;text-decoration:underline;">Haru</a>. This page is <a href="https://github.com/cloudyharu/neso" target="_blank" style="color:#fee202;text-decoration:underline;">open source!</a></p>
+<p class="footer">By&nbsp;<a href="https://twitter.com/frostyharu" target="_blank" style="color:#fee202;text-decoration:underline;">Haru</a>, with contributions from&nbsp;<a href="https://twitter.com/Dalibor_osu" target="_blank" style="color:#fee202;text-decoration:underline;">Dalibor</a>. This page is&nbsp;<a href="https://github.com/cloudyharu/neso" target="_blank" style="color:#fee202;text-decoration:underline;">open source!</a></p>
 </body>
 </html>
