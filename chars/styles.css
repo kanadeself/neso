@@ -17,6 +17,15 @@ body {
     padding:8px;
 }
 
+.logos .logo-image{
+    width: 200px
+}
+
+.logos .logo-image.us{
+    height: 100px;
+    width:auto
+}
+
 .character {
     display:flex;
     flex-wrap: wrap;
