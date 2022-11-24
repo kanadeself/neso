@@ -1,66 +1,46 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NesoDB</title>
-        <link rel="icon" type="image/png" href="img/fav.png">
-        <meta name="theme-color" content="#231145" />
-        <meta property="og:title" content="NesoDB.me" />
-        <meta property="og:description" content="All nesoberi outfits (for LoveLive!)" />
-        <meta property="og:image" content="https://nesodb.me/chars/img/fav.png" />
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Readex+Pro&display=swap" rel="stylesheet">
-    </head>
-<body style="background:#231145;color:white;font-family:'Nunito', sans-serif;">
-    <div class="logos">
-        <img src="img/us.png" style="height:100px;">
-    </div>
-    <div class="character"></div>
-    <script id="list" type="text/x-handlebars-template">
-        {{#each us}}
-        <div style="padding: 8px;">
-            <a href="{{toLowerCase name}}/">
-                <img src="img/{{toLowerCase name}}/portrait.png" class="round-image btni" style="background-color:{{color}};border-radius:50%;width:10rem;">
-            </a>
-        </div>
-        {{/each}}
-        <div class="logos">
-            <img src="img/aqours.png" style="width:200px; text-align: center;">
-        </div>
-        {{#each aqours}}
-        <div style="padding: 8px;">
-            <a href="{{toLowerCase name}}/">
-                <img src="img/{{toLowerCase name}}/portrait.png" class="round-image btni" style="background-color:{{color}};border-radius:50%;width:10rem;">
-            </a>
-        </div>
-        {{/each}}
-        <div class="logos">
-            <img src="img/niji.png" style="width:200px; text-align: center;">
-        </div>
-        {{#each niji}}
-        <div style="padding: 8px;">
-            <a href="{{toLowerCase name}}/">
-                <img src="img/{{toLowerCase name}}/portrait.png" class="round-image btni" style="background-color:{{color}};border-radius:50%;width:10rem;">
-            </a>
-        </div>
-        {{/each}}
-        <div class="logos">
-            <img src="img/liella.png" style="width:200px; text-align: center;">
-        </div>
-        {{#each liella}}
-        <div style="padding: 8px;">
-            <a href="{{toLowerCase name}}/">
-                <img src="img/{{toLowerCase name}}/portrait.png" class="round-image btni" style="background-color:{{color}};border-radius:50%;width:10rem;">
-            </a>
-        </div>
-        {{/each}}
-    </script>
-    <p>By <a href="https://twitter.com/frostyharu" target="_blank" style="color:#fee202;text-decoration:underline;">Haru</a>. This page is <a href="https://github.com/cloudyharu/neso" target="_blank" style="color:#fee202;text-decoration:underline;">open source!</a></p>
+<html lang="en">
 
-<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-<script type="module" src="data/chardata.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NesoDB</title>
+    <link rel="icon" type="image/png" href="img/fav.png">
+    <meta name="theme-color" content="#231145" />
+    <meta property="og:title" content="NesoDB.me" />
+    <meta property="og:description" content="All nesoberi outfits (for LoveLive!)" />
+    <meta property="og:image" content="https://nesodb.me/chars/img/fav.png" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Readex+Pro&display=swap" rel="stylesheet">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./src/components/CharImage.js"></script>
+    <script type="text/babel" src="./src/components/GroupLogo.js"></script>
+    <script type="text/babel" src="./src/components/GenerateCharList.js"></script>
+    <script type="text/babel" src="./src/components/Neso.js"></script>
+    <script type="text/babel" src="./src/components/NesoContainer.js"></script>
+    <script type="text/babel" src="./src/components/NameHeader.js"></script>
+    <script type="text/babel" src="./src/Utils/FetchData.js"></script>
+    <script src="./src/Utils/filter.js"></script>
+    <script type="text/babel" src="./src/components/MButtons.js"></script>
+</head>
+
+<body style="background:#231145;color:white;font-family:'Nunito', sans-serif;">
+
+    <div id="header"></div>
+    <div id="myBtnContainer" class="buttons"></div>
+    <div id="root"></div>
+
+    <script type="text/babel" src="./src/components/RenderCharPage.js"></script>
+
+    <p class="footer">By&nbsp;<a href="https://twitter.com/frostyharu" target="_blank"
+            style="color:#fee202;text-decoration:underline;">Haru</a>, with contributions from&nbsp;<a
+            href="https://twitter.com/Dalibor_osu" target="_blank"
+            style="color:#fee202;text-decoration:underline;">Dalibor</a>. This page is&nbsp;<a
+            href="https://github.com/cloudyharu/neso" target="_blank"
+            style="color:#fee202;text-decoration:underline;">open source!</a></p>
 </body>
-</html> 
+
+</html>

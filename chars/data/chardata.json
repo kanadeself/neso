@@ -1,4 +1,7 @@
 {
+    "groups": [
+        "us", "aqours", "niji", "liella"    
+    ],
     "us": [
        {
            "name": "Honoka",
