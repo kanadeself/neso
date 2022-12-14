@@ -3020,6 +3020,14 @@
             "size": "40cm",
             "exclusive": "No",
             "img": "smjnn.jpg"
+        },
+        {
+            "name": "Winter Uniform",
+            "year": "2023",
+            "msize": "TJNN",
+            "size": "1m",
+            "exclusive": "No",
+            "img": "tera.jpg"
         }
     ],
     "kanata": [
