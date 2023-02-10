@@ -1,6 +1,6 @@
 {
     "groups": [
-        "us", "aqours", "niji", "liella"    
+        "us", "aqours", "niji", "liella", "hasunosora"    
     ],
     "us": [
        {
@@ -177,5 +177,31 @@
            "name": "Natsumi",
            "color": "#ff51c4"
        }
+   ],
+   "hasunosora": [
+        {
+            "name": "Kaho",
+            "color": "#f8b500"
+        },
+        {
+            "name": "Sayaka",
+            "color": "#5383c3"
+        },
+        {
+            "name": "Kozue",
+            "color": "#68be8d"
+        },
+        {
+            "name": "Tsuzuri",
+            "color": "#ba2636"
+        },
+        {
+            "name": "Rurino",
+            "color": "#e7609e"
+        },
+        {
+            "name": "Megumi",
+            "color": "#c8c2c6"
+        }
    ]
 }

@@ -14,15 +14,15 @@ function Neso(neso, char) {
                     </div>
                     <div className="bottominfo">
                         <p>
-                            <span style={{ fontWeight: 'bold' }}>Release Year:</span>
+                            <span style={{ fontWeight: 'bold' }}>Release Year:&nbsp;</span>
                             <span>{neso.year}</span>
                         </p>
                         <p>
-                            <span style={{ fontWeight: 'bold' }}>Actual Size:</span>
+                            <span style={{ fontWeight: 'bold' }}>Actual Size:&nbsp;</span>
                             <span>{neso.size}</span>
                         </p>
                         <p>
-                            <span style={{ fontWeight: 'bold' }}>Exclusive to member?:</span>
+                            <span style={{ fontWeight: 'bold' }}>Exclusive to member?:&nbsp;</span>
                             <span>{neso.exclusive}</span>
                         </p>
                     </div>
