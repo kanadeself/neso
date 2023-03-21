@@ -1,3 +1,6 @@
+@import url("../fonts/gfont-readexpro.css");
+@import url("../fonts/gfont-nunito.css");
+
 @media screen and (max-width: 530px) {
     .rectangle {
         width: 20rem;
@@ -28,6 +31,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     flex-shrink: 3;
+    background:#231145;
+    color:white;
+    font-family:'Nunito', sans-serif;
 }
 
 .logos {
