@@ -10,14 +10,11 @@
         <meta property="og:description" content="Informative site all about nesoberis" />
         <meta property="og:image" content="https://nesodb.com/img/fav.png" />
         <link rel="stylesheet" href="styles.css">
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Readex+Pro&display=swap" rel="stylesheet">
+        <script src="./jquery-3.6.1.min.js"></script>
     </head>
-    <body style="background:#231145;font-family: 'Nunito', sans-serif;margin:0;">
+    <body>
     <div class="everything">
-        <div class="centerstuff" style="padding: 8px;border:6px black solid;border-radius:15%;overflow: hidden;">
+        <div class="centerstuff">
             <a href="guide_en" class="hover">
                 <img src="./img/tip.jpg" class="button image">
             </a>
@@ -25,12 +22,12 @@
                 <a href="guide_en" class="p">Neso buy guide</a>
             </div>
         </div>
-        <div class="centerstuff" style="padding: 8px;border:6px black solid;border-radius:15%;overflow: hidden;">
-            <a href="/chars/" class="hover">
+        <div class="centerstuff">
+            <a href="chars" class="hover">
                 <img src="" class="button neso image">
             </a>
             <div class="middle">
-                <a href="/chars/" class="p">NesoDB</a>
+                <a href="chars" class="p">NesoDB</a>
             </div>
         </div>
     </div>
@@ -39,12 +36,10 @@
         <a href="https://github.com/cloudyharu/neso"><img src="img/github.png" class="icon"></a>
     </div>
     <script type="text/javascript">
-        $('.neso').each(function() {
-
+        $('.neso').each(function(){
             var num = Math.floor(Math.random() * 9 + 1),
-                img = $(this);
-            
-            img.attr('src', './img/neso'+num+'.jpg');    
+            img = $(this);            
+            img.attr('src', './img/neso'+num+'.jpg');
         });
     </script>
     </body>

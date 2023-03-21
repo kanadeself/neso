@@ -1,3 +1,5 @@
+@import url("fonts/gfont-nunito.css");
+
 @media (max-width: 240px) {
     .main {
         width: 90vw;
@@ -29,6 +31,17 @@
     }
  }
 
+body {
+    background-color:#231145;
+    color:white;
+    font-family:'Nunito',sans-serif;
+    font-size:large;
+}
+
+#p-img {
+    display:flex;
+}
+
 .nav-top {
     padding-top: 10px;
     display: flex;
@@ -40,6 +53,10 @@
     text-align: center;
 }
 
+.centerself {
+    align-self: center;
+}
+
 .nav-text {
     padding: 0 10px 0 10px;
     color: gray;
@@ -47,6 +64,10 @@
     font-size: large;
     text-decoration: none;
     transition: 0.3s;
+}
+
+.white.warning {
+    color:white;
 }
 
 .text-active {
@@ -72,6 +93,10 @@
 .root {
     display: flex;
     justify-content: center;
+}
+
+.ulpadleft {
+    padding-left:0;
 }
 
 li {
@@ -133,4 +158,23 @@ a:hover {
 .icon:hover {
     transition: 0.3s;
     width: 40px;
+}
+
+.anchan-img {
+    width:300px;
+}
+
+.anchan-txt {
+    font-size:small;
+    font-style:italic;
+    margin-top:0px;
+}
+
+.small-italic {
+    font-size:small;
+    font-style:italic;
+}
+
+.xlarge {
+    font-size: x-large;
 }
