@@ -190,3 +190,54 @@ img {
     flex-basis: 100%;
     text-align: center;
 }
+
+.nav-top {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-text {
+    padding: 0 10px 0 10px;
+    color: gray;
+    font-family: 'Nunito', sans-serif;
+    font-size: large;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.text-active {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    color: white;
+    font-size: x-large;
+}
+
+.nav-text:hover {
+    transition: 0.3s;
+    font-size: x-large;
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.icon-div {
+    position: fixed;
+    bottom: 15px;
+    left: 25px;
+}
+
+.socialicon {
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+    width: auto;
+    height: 30px;
+}
+
+.socialicon:hover {
+    transition: 0.3s;
+    width: auto;
+    height: 40px;
+}

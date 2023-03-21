@@ -2,6 +2,10 @@ function RenderCharList(data) {
     const CharList = () => {
         return (
             <div className="character">
+                <div class="nav-top">
+                    <a href="../chars/" class="nav-text text-active">Database</a>
+                    <a href="../guide_en" class="nav-text">Buying guide</a>
+                </div>
 
                 {data.groups.map((group) => {
                     return (

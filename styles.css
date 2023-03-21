@@ -42,3 +42,21 @@
     filter:blur(0);
     -webkit-filter:blur(0);
   }
+
+.icon-div {
+    position: fixed;
+    bottom: 15px;
+    left: 25px;
+}
+
+.icon {
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+    width: 30px;
+}
+
+.icon:hover {
+    transition: 0.3s;
+    width: 40px;
+}
