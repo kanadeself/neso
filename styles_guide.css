@@ -2,15 +2,24 @@
     .main {
         width: 90vw;
     } 
+    #p-img {
+        flex-direction: column;
+    }
 }
  @media (min-width: 241px) and (max-width: 319px) {
     .main {
         width: 80vw;
     } 
+    #p-img {
+        flex-direction: column;
+    }
 }
  @media (min-width: 320px) and (max-width: 767px) {
     .main {
         width: 75vw;
+    }
+    #p-img {
+        flex-direction: column;
     }
 }
  @media (min-width: 768px) {
