@@ -177,6 +177,8 @@ a:hover {
     font-size:small;
     font-style:italic;
     margin-top:0px;
+    width: 300px;
+    text-align: center;
 }
 
 .small-italic {
