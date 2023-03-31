@@ -9,6 +9,7 @@
         <meta property="og:title" content="NesoDB" />
         <meta property="og:description" content="Informative site all about nesoberis" />
         <meta property="og:image" content="https://nesodb.com/img/fav.png" />
+        <meta name="description" content="Informative site all about nesoberis">
         <link rel="stylesheet" href="styles.css">
         <script src="./jquery-3.6.1.min.js"></script>
     </head>
@@ -37,7 +38,7 @@
     </div>
     <script type="text/javascript">
         $('.neso').each(function(){
-            var num = Math.floor(Math.random() * 9 + 1),
+            var num = Math.floor(Math.random() * 48 + 1),
             img = $(this);            
             img.attr('src', './img/neso'+num+'.jpg');
         });
