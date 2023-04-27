@@ -136,15 +136,6 @@ a:hover {
     width: 30px;
 }
 
-.lng:hover {
-    transition: 0.3s;
-    width: 40px;
-}
-
-.active {
-    width: 40px;
-}
-
 .warning {
     font-style:italic; 
     font-weight:bold; 
