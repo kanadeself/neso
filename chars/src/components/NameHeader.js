@@ -4,7 +4,7 @@ function RenderNameHeader(name, char) {
             <div className="header">
                 <div class="nav-top">
                     <a href="../chars/" class="nav-text">Database</a>
-                    <a href="../guide" class="nav-text">Buying guide</a>
+                    <a href="../guide.html" class="nav-text">Buying guide</a>
                 </div>
                 <div className="headertext">
                     <h1>{name}</h1>

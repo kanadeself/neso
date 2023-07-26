@@ -4,7 +4,7 @@ function RenderCharList(data) {
             <div className="character">
                 <div class="nav-top">
                     <a href="../chars/" class="nav-text text-active">Database</a>
-                    <a href="../guide" class="nav-text">Buying guide</a>
+                    <a href="../guide.html" class="nav-text">Buying guide</a>
                 </div>
 
                 {data.groups.map((group) => {
