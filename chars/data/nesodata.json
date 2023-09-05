@@ -252,6 +252,14 @@
             "img": "bmjnn.jpg"
         },
         {
+            "name": "Genjitsu no Yohane",
+            "year": "2021",
+            "msize": "MJNN",
+            "size": "40cm",
+            "exclusive": "Yes",
+            "img": "gnymjnn.jpg"
+        },
+        {
             "name": "Santa Girls",
             "year": "2017",
             "msize": "LL",
@@ -5488,6 +5496,14 @@
             "size": "16cm",
             "exclusive": "No",
             "img": "snnn.jpg"
+        },
+        {
+            "name":"SUO",
+            "year": "2023",
+            "msize": "NNN",
+            "size": "16cm",
+            "exclusive": "No",
+            "img": "suonnn.jpg"
         }
     ],
     "sayaka": [
@@ -5499,6 +5515,14 @@
             "size": "16cm",
             "exclusive": "No",
             "img": "snnn.jpg"
+        },
+        {
+            "name":"SUO",
+            "year": "2023",
+            "msize": "NNN",
+            "size": "16cm",
+            "exclusive": "No",
+            "img": "suonnn.jpg"
         }
     ],
     "kozue": [
@@ -5510,6 +5534,14 @@
             "size": "16cm",
             "exclusive": "No",
             "img": "snnn.jpg"
+        },
+        {
+            "name":"SUO",
+            "year": "2023",
+            "msize": "NNN",
+            "size": "16cm",
+            "exclusive": "No",
+            "img": "suonnn.jpg"
         }
     ],
     "tsuzuri": [
@@ -5521,6 +5553,14 @@
             "size": "16cm",
             "exclusive": "No",
             "img": "snnn.jpg"
+        },
+        {
+            "name":"SUO",
+            "year": "2023",
+            "msize": "NNN",
+            "size": "16cm",
+            "exclusive": "No",
+            "img": "suonnn.jpg"
         }
     ],
     "rurino": [
@@ -5532,6 +5572,14 @@
             "size": "16cm",
             "exclusive": "No",
             "img": "snnn.jpg"
+        },
+        {
+            "name":"SUO",
+            "year": "2023",
+            "msize": "NNN",
+            "size": "16cm",
+            "exclusive": "No",
+            "img": "suonnn.jpg"
         }
     ],
     "megumi": [
@@ -5543,6 +5591,14 @@
             "size": "16cm",
             "exclusive": "No",
             "img": "snnn.jpg"
+        },
+        {
+            "name":"SUO",
+            "year": "2023",
+            "msize": "NNN",
+            "size": "16cm",
+            "exclusive": "No",
+            "img": "suonnn.jpg"
         }
     ]
 }
