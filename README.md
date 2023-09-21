@@ -1,3 +1,6 @@
+# This repo is no longer updated
+The whole website structure has been changed and now runs most of it on back-end. 
+
 # nesodb.com
 Source code for nesodb.com, which includes the neso buy guide and nesoDB. 
 ## Code
