@@ -1,0 +1,31 @@
+<?php
+$lang = array(
+    "welcome" => "ようこそ、%sさん！",
+    "about_us" => "私たちについて",
+    "headernesocollection" => "私の寝そべりコレクション",
+    "logout" => "ログアウト",
+    "databasename" => "データベース",
+    "collectionname" => "コレクション",
+    "trackyourcollection" => "自分の寝そべりコレクションを追跡しましょう！",
+    "shareablelink" => "あなたの共有可能なリンクは",
+    "totalnesoberis" => "寝そべり保有総数：",
+    "create" => "あなたは他の人の寝そべりコレクションを閲覧しています。 %s で独自のものを作成できます。",
+    "othernesocollection" => "の寝そべりコレクション",
+    "oops" => "やばい！",
+    "doesntexist" => "表示しようとしているコレクションは存在しません。",
+    "loginfail" => "ログインに失敗しました",
+    "registrationsuccess" => "登録は成功しました、やったー！ ログインできるようになりました。",
+    "registrationerror" => "ユーザー名 %s はすでに使用されています、申し訳ありません...",
+    "login" => "ログイン",
+    "username" => "ユーザー名",
+    "pincode" => "ピンコード",
+    "4digit" => "4桁の数字ピンコード",
+    "registerquestion" => "アカウントを登録？",
+    "register" => "登録する",
+    "loginexisting" => "既存のアカウントにログインする",
+    "mycollection" => "私のコレクション",
+    "nesodb" => "寝そべりデータベース",
+    "nesobericollection" => "寝そべりコレクション",
+    "startmsg" => "開始するには、以下のアイドルを選択してください"
+);
+?>

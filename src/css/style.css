@@ -1,0 +1,173 @@
+.loginform {
+  transform: scale(1.7);
+}
+
+body {
+    font-family:'Nunito',sans-serif;
+    background:#231145;
+    margin:0;
+    color: white;
+}
+
+.btn {
+  border: 3px white solid;
+  border-radius: 20px;
+  outline: none;
+  padding: 5px 20px 5px 20px;
+  margin: 1px;
+  background-color: #533190;
+  color: white;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif !important;
+  transition: 0.3s;
+  margin: 5px;
+}
+
+.icon-div {
+  position: fixed;
+  top: 15px;
+  left: 25px;
+}
+
+.iconsocial {
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 0 5px 0 5px;
+  width: 30px;
+}
+
+.iconsocial:hover {
+  transition: 0.3s;
+  width: 40px;
+}
+
+.btn:hover {
+  background-color: #8166b2;
+  transform: scale(1.2);
+}
+
+div.scroll {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 95vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius:20px;
+}
+
+::-webkit-scrollbar {
+height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #533190; 
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #8166b2; 
+border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #b197e2; 
+}
+
+.collapsible {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 5px;
+    background-size: 100px;
+    flex-shrink: 0;
+    border: 0;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+    font-family:'Nunito',sans-serif;
+  color: white;
+  font-weight: bold;
+  }
+
+.collapsible:hover {
+  transform: scale(1.1);
+}
+
+#divCounters {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 100px 0 100px;
+}
+
+.iconimg {
+  width: 35px;
+  height: 35px;
+  padding-right:5px;
+}
+
+.textcounter {
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+.error {
+  position:absolute;
+  top: 10px;
+}
+
+
+.success {
+  position:absolute;
+  top: 10px;
+}
+
+.nav-top {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:bold;
+}
+
+.nav-text {
+  padding: 0 10px 0 10px;
+  color: gray;
+  font-family: 'Nunito', sans-serif;
+  font-size: large;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.text-active {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  color: white;
+  font-size: x-large;
+}
+
+.nav-text:hover {
+  transition: 0.3s;
+  font-size: x-large;
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+#filterContainer {
+  gap: 8px;
+  padding: 20px;
+}

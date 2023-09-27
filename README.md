@@ -1,10 +1,10 @@
-# nesodb.com
-Source code for nesodb.com, which includes the neso buy guide and nesoDB. 
-## Code
-NesoDB page is generated using [React](https://reactjs.org/) and its components which are compiled by [Babel](https://babeljs.io/). It takes "char" variable in URL and renders content accordingly. If unknown or no value is detected, page just shows a list of all Love Live! girls.
+# nesodb.me
+Source code for nesodb.me, which includes the database and the collections. 
+## Note
+Yes, the buy guide is gone. It's still accesible under the old link (https://nesodb.me/guide.html) but I'm unhappy with it and probably won't update it in the future.
 
-Want to translate the guide? Copy the example file in locales/example_lng/translation.json to a folder with the [two letter code](https://www.iban.com/country-codes) of the language you're translating to. Translations are made by [i18nextify](https://github.com/i18next/i18nextify)
-
-Changes to the main branch are automatically reflected on the live website. Everyone's free to contribute with new releases, bug fixes...
-
-Twemoji graphics made by Twitter and other contributors, licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
+## Credits
+- [nyawaru](https://twitter.com/nowaruuu) for helping with most of the new backend code and translating the guide to italian
+- [Dalibor](https://github.com/dalibor-osu) for making the old code way less shittier
+- [xJakub](https://github.com/xJakub) fixed some bugs
+- [Skid](https://github.com/skid9000) for translating the guide to french

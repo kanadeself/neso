@@ -6,6 +6,42 @@ body {
     margin:0;
 }
 
+.button {
+    background-color: #c64dff;
+    color: #ffffff;
+    font-size: 1.5em;
+    position: relative;
+    outline: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    width: 300px;
+    text-decoration: none;
+    margin: auto;
+    border: 3px white solid;
+    transition: 0.5s ease;
+    font-weight: bold;
+
+  }
+
+.button:hover {
+    transform:scale(1.2)
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+
+li {
+    padding-top: 10%
+}
+
 .everything {
     display: flex;
     flex-wrap: wrap;
