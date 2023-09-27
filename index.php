@@ -34,15 +34,6 @@
         <link rel="stylesheet" href="./styles.css">
         <script src="./jquery-3.6.1.min.js"></script>
     </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3WYPSNK7E7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3WYPSNK7E7');
-</script>
     <body>
     <div class="everything">
         <ul>
