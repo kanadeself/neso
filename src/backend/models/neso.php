@@ -5,14 +5,36 @@ class Neso {
     public string $Size;
     public string $ImageFileName;
     public string $IdolName;
+    public string $DisplayName;
     public string $Exclusive;
     public string $ActualSize;
     public string $ReleaseYear;
+    public int $OwnedBy;
+    
 
-    public function __construct($row, $IdolName) {
+    public function __construct($row, $preflang) {
+        
+        if ($preflang === 'ja') {
+            $this->DisplayName = $row["IdolNameJP"];
+        } else {
+            $this->DisplayName = $row["IdolName"];
+        }
+
+        if ($preflang === 'ja') {
+            $this->Name = $row["NesoNameJP"];
+        } else {
+            $this->Name = $row["NesoName"];
+        }
+        
+        $this->IdolName = $row["IdolName"];
         $this->Id = intval($row["NesoID"]);
-        $this->Name = $row["NesoName"];
-        $this->Size = $row["Size"];
+
+        if ($preflang === 'ja') {
+            $this->Size = $row["SizeJP"];
+        } else {
+            $this->Size = $row["Size"];
+        }
+
         if(isset($row["ActualSize"])) {
             $this->ActualSize = $row["ActualSize"];
         } 
@@ -24,7 +46,11 @@ class Neso {
         } 
 
         $this->ImageFileName = $row["ImageFileName"];
-        $this->IdolName = $IdolName;
+
+        if(isset($row["OwnedBy"])) {
+            $this->OwnedBy = $row["OwnedBy"];
+        }
+        
     }
 }
 ?>

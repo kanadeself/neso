@@ -5,6 +5,7 @@
     session_start();
     if (isset($_SESSION['username']) && isset($_SESSION['pincode']) && isset($_POST['NesoID'])) {
         $username = $_SESSION['username'];
+        $userid = $_SESSION['userID'];
         $pincode = $_SESSION['pincode'];
         $nesoId = intval($_POST['NesoID']);
 
@@ -13,12 +14,12 @@
             $ownedNesos = getOwnedNesoIds($con, $username);
             echo "Saving neso with ID " . $nesoId;
             if(in_array($nesoId, $ownedNesos)) {
-                $query = "DELETE FROM NesoOwnership WHERE Username = ? AND NesoID = ?";
+                $query = "DELETE FROM NesoOwnership WHERE UserID = ? AND NesoID = ?";
             } else {
-                $query = "INSERT INTO NesoOwnership (Username, NesoID) VALUES (?, ?)";
+                $query = "INSERT INTO NesoOwnership (UserID, NesoID) VALUES (?, ?)";
             }
             $stmt = $con->prepare($query);
-            $stmt->bind_param("si", $username, $nesoId); 
+            $stmt->bind_param("si", $userid, $nesoId); 
             $stmt->execute();
             echo " OK";
         }

@@ -5,15 +5,18 @@ class Idol {
     public string $NameJP;
     public string $FullName;
     public string $Color;
+    public string $Franchise;
     public array $Nesos;
 
     public function __construct($row) {
         $this->Id = intval($row["IdolID"]);
-        $this->Name = explode(" ", $row["IdolName"])[0];
+        $name = explode(" ", $row["IdolName"]);
+        $this->Name = implode("", $name);
         $this->FullName = $row["IdolName"];
         $this->NameJP = $row["IdolNameJP"];
         $this->Color = $row["Color"];
         $this->Nesos = [];
+        $this->Franchise = $row["franchise"];
     }
 }
 ?>

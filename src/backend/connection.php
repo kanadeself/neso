@@ -1,7 +1,7 @@
 <?php      
-    $host = "localhost";  
-    $user = "TEST_USER";  
-    $password = 'TEST_PASSWORD';  
+    $host = "";  
+    $user = "";  
+    $password = '';  
     $db_name = "nesos";  
       
     $con = mysqli_connect($host, $user, $password, $db_name); 

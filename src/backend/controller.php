@@ -9,10 +9,15 @@
         include($_SERVER['DOCUMENT_ROOT'].'/src/locale/en.php');
     }
 
-    function getIdols($con) {
-        global $preferred_language;
+    function getIdols($con, $franchise, $preflang) {
         $listIdols = [];
-        $stmt = $con->prepare("SELECT * FROM Nesos N JOIN Idols I ON N.IdolID = I.IdolID; ");
+
+        $stmt = $con->prepare("SELECT * FROM Nesos N JOIN Idols I ON N.IdolID = I.IdolID WHERE I.franchise = ?; ");
+        if (!empty($franchise)) {
+            $stmt->bind_param("s", $franchise);
+        } else {
+            $stmt->bind_param("s", "lovelive");
+        }
         $stmt->execute();
         $response = $stmt->get_result();
         if (mysqli_num_rows($response) > 0) {
@@ -24,17 +29,17 @@
                     }
                     $currentIdol = new Idol($row);
                } 
-               $currentIdol->Nesos[] = new Neso($row, $currentIdol->Name);
+               $currentIdol->Nesos[] = new Neso($row, $preflang);
             }
             $listIdols[] = $currentIdol;
         }
         return $listIdols;
     }
 
-    function getOwnedNesoIds($con, $userName) {
+     function getOwnedNesoIds($con, $username) {
         $listNesos = [];
-        $stmt = $con->prepare("SELECT NesoID FROM NesoOwnership WHERE Username = ?");
-        $stmt->bind_param("s", $userName);
+        $stmt = $con->prepare("SELECT NesoID FROM NesoOwnership WHERE UserID = (SELECT UserID FROM Users WHERE Username = ?)");
+        $stmt->bind_param("s", $username);
         $stmt->execute();
         $response = $stmt->get_result();
         if (mysqli_num_rows($response) > 0) {
@@ -43,39 +48,31 @@
             }
         }
         return $listNesos;
-    }
+    } 
 
-    function getOwnedNesos($con, $userName) {
+    function getOwnedNesos($con, $userName, $varLang) {
         $listNesos = [];
-        global $preferred_language;
         
-        $nesoNameColumn = ($preferred_language === 'ja') ? 'N.NesoNameJP' : 'N.NesoName';
-        $sizeColumn = ($preferred_language === 'ja') ? 'N.SizeJP' : 'N.Size';
+        $stmt = $con->prepare("SELECT *, (SELECT COUNT(*) FROM NesoOwnership WHERE NesoID = N.NesoID AND UserID <> IFNULL((SELECT UserID FROM Users WHERE Username = ?), -1)) AS OwnedBy FROM NesoOwnership NO JOIN Nesos N ON NO.NesoID = N.NesoID JOIN Idols I ON N.IdolID = I.IdolID 
+            WHERE NO.UserID = (SELECT UserID FROM Users WHERE Username = ?);");
         
-        $stmt = $con->prepare("SELECT N.NesoID, $nesoNameColumn AS NesoName, $sizeColumn AS Size, N.ImageFileName, I.IdolName 
-            FROM NesoOwnership NO JOIN Nesos N ON NO.NesoID = N.NesoID JOIN Idols I ON N.IdolID = I.IdolID 
-            WHERE NO.Username = ?;");
-        
-        $stmt->bind_param("s", $userName);
+        $stmt->bind_param("ss", $userName, $userName);
         $stmt->execute();
         $response = $stmt->get_result();
         
         if (mysqli_num_rows($response) > 0) {
             while($row = mysqli_fetch_array($response)) {
-               $listNesos[] = new Neso($row, explode(" ", $row["IdolName"])[0]);
+               $listNesos[] = new Neso($row, $varLang);
             }
         }
         
         return $listNesos;
     }
-    function getNesosByIdol($con, $name, $varLang) {
+
+    function getNesosByIdol($con, $fullname, $varLang, $userName) {
         $listNesos = [];
-        $nesoNameColumn = ($varLang === 'ja') ? 'N.NesoNameJP' : 'N.NesoName';
-        $nesoSizeColumn = ($varLang === 'ja') ? 'N.SizeJP' : 'N.Size';
-        $nesoExclusiveColumn = ($varLang === 'ja') ? 'N.ExclusiveJP' : 'N.Exclusive';
     
-        $stmt = $con->prepare("SELECT * FROM (
-            SELECT N.NesoID, N.ImageFileName, I.IdolName, $nesoNameColumn AS NesoName, $nesoSizeColumn AS Size, ReleaseYear, ActualSize, $nesoExclusiveColumn AS Exclusive, CASE
+        $stmt = $con->prepare("SELECT *, CASE
             WHEN Size = 'Petit' THEN 1 
             WHEN Size = 'KCM' THEN 2
             WHEN Size = 'NNN' THEN 3
@@ -83,25 +80,24 @@
             WHEN Size = 'MJNN' THEN 5
             WHEN Size = 'LL' THEN 6
             WHEN Size = 'TJNN' THEN 7
-            ELSE 8 END AS SizeOrder
-            FROM Nesos N JOIN Idols I ON N.IdolID = I.IdolID WHERE LOWER(I.IdolName) LIKE CONCAT(LOWER(?), ' %')
-    ) A ORDER BY SizeOrder");
-        $stmt->bind_param("s", $name);
+            ELSE 8 END AS SizeOrder, 
+            (SELECT COUNT(*) FROM NesoOwnership WHERE NesoID = N.NesoID AND UserID <> IFNULL((SELECT UserID FROM Users WHERE Username = ?), -1)) AS OwnedBy
+            FROM Nesos N JOIN Idols I ON N.IdolID = I.IdolID 
+            WHERE REPLACE(LOWER(I.IdolName), ' ', '') LIKE CONCAT(TRIM(?), '%') ORDER BY SizeOrder");
+        $stmt->bind_param("ss", $userName, $fullname);
         $stmt->execute();
         $response = $stmt->get_result();
     
         if (mysqli_num_rows($response) > 0) {
             while ($row = mysqli_fetch_array($response)) {
-                $listNesos[] = new Neso($row, $name);
+                $name = explode(" ", $row["IdolName"]);
+                $listNesos[] = new Neso($row, $varLang);
             }
         }
     
         return $listNesos;
     }
     
-     
-    
-
     function doesUserExist($con, $userName) {
         $stmt = $con->prepare("SELECT * FROM Users WHERE Username = ?");
         $stmt->bind_param("s", $userName);
@@ -110,4 +106,29 @@
         return (mysqli_num_rows($response) > 0);
     }
 
+    function getTwitter($con, $username) {
+        $stmt = $con->prepare("SELECT twitter FROM Users WHERE Username = ?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $response = $stmt->get_result();
+        if (mysqli_num_rows($response) > 0) {
+            $row = mysqli_fetch_array($response);
+            return $row["twitter"];
+        }
+        return "";
+    }
+
+    function getFranchises($con) {
+        $stmt = $con->prepare("SELECT DISTINCT franchise FROM Idols;");
+        $stmt->execute();
+        $response = $stmt->get_result();
+        $listFranchises = [];
+        if (mysqli_num_rows($response) > 0) {
+            while ($row = mysqli_fetch_array($response)) {
+                $listFranchises[] = $row["franchise"];
+            }
+        }
+
+        return $listFranchises;
+    }
 ?>

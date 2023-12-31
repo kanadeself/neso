@@ -1,35 +1,37 @@
-DROP TABLE IF EXISTS NesoOwnership;
-DROP TABLE IF EXISTS Nesos;
-DROP TABLE IF EXISTS Users;
-DROP TABLE IF EXISTS Idols;
-
-CREATE TABLE Users (
-    Username VARCHAR(50) UNIQUE NOT NULL,
-    Pincode INT NOT NULL,
-    PRIMARY KEY (Username)
-);
-
 CREATE TABLE Idols (
-    IdolID INT NOT NULL AUTO_INCREMENT,
-    IdolName VARCHAR(50) UNIQUE NOT NULL,
-    Color VARCHAR(7),
-    PRIMARY KEY (IdolID)
-);
-
-CREATE TABLE Nesos (
-    NesoID INT NOT NULL AUTO_INCREMENT,
-    NesoName VARCHAR(100),
-    IdolID INT NOT NULL,
-    Size VARCHAR(10),
-    ImageFileName VARCHAR(50),
-    PRIMARY KEY (NesoID),
-    FOREIGN KEY (IdolID) REFERENCES Idols(IdolID)
+  IdolID int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  IdolName varchar(50) NOT NULL UNIQUE,
+  IdolNameJP varchar(50) NOT NULL,
+  Color varchar(7) DEFAULT NULL,
+  franchise varchar(50) NOT NULL
 );
 
 CREATE TABLE NesoOwnership (
-    Username VARCHAR(50) NOT NULL,
-    NesoID INT NOT NULL,
-    FOREIGN KEY (Username) REFERENCES Users(Username),
-    FOREIGN KEY (NesoID) REFERENCES Nesos(NesoID)
+  UserID int NOT NULL,
+  NesoID int NOT NULL,
+  FOREIGN KEY(UserID) REFERENCES Users(UserID),
+  FOREIGN KEY(NesoID) REFERENCES Nesos(NesoID)
 );
 
+CREATE TABLE Nesos (
+  NesoID int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  NesoName varchar(100) DEFAULT NULL,
+  NesoNameJP varchar(50) NOT NULL,
+  IdolID int NOT NULL,
+  Size varchar(15) DEFAULT NULL,
+  SizeJP varchar(50) NOT NULL,
+  ReleaseYear varchar(5) DEFAULT NULL,
+  ActualSize varchar(10) DEFAULT NULL,
+  ImageFileName varchar(50) DEFAULT NULL,
+  franchise varchar(50) NOT NULL,
+  FOREIGN KEY(IdolID) REFERENCES Idols(IdolID)
+);
+
+CREATE TABLE Users (
+  UserID int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  Username varchar(50) NOT NULL UNIQUE,
+  Pincode int NOT NULL,
+  date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  twitter varchar(16) DEFAULT NULL,
+  lang varchar(2) NOT NULL DEFAULT 'en'
+);
